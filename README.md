@@ -38,20 +38,20 @@ Movielo is a high-performance streaming platform for movies offering a seamless 
 
 1. Install Node.js
 
-Download the latest LTS version from the official Node.js. Confirm installation by checking the versions in terminal.
+   Download the latest LTS version from the official Node.js. Confirm installation by checking the versions in terminal.
 
 2. Navigate to Project Folder
 
-Open a terminal and use the cd command to move into project directory.
+   Open a terminal and use the cd command to move into project directory.
 
 3. Clear Existing Dependencies
 
-Delete the node_modules folder to ensure a fresh setup.
+   Delete the node_modules folder to ensure a fresh setup.
 
 4. Reinstall Dependencies
 
-Run the command to reinstall all required packages.
+   Run the command to reinstall all required packages.
 
 5. Start Development Server
 
-Launch the server and access project at http://localhost:3000 (if configured for port 3000).
+   Launch the server and access project at http://localhost:3000 (if configured for port 3000).
