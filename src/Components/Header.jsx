@@ -7,7 +7,10 @@ import {
 } from "react-icons/io5";
 
 function Header() {
+  // State to handle the toggle for the mobile menu
   const [toggle, setToggle] = useState(true);
+
+  // Navigation menu items
   const menu = [
     {
       id: 1,
@@ -37,10 +40,16 @@ function Header() {
 
   return (
     <div className="flex justify-between items-center p-4 px-10">
+      {/* Logo */}
+
       <img src={logo} className="w-[120px]" />
+
+      {/* Desktop Navigation Menu */}
+
       <ul className="hidden  md:flex gap-8">
         {menu.map((item) => (
           <li
+            key={item.id}
             className="text-gray-400 text-[18px] 
                 font-medium cursor-pointer mb-3 mt-2 
                  hover:bg-gray-600 hover:text-white
@@ -50,7 +59,11 @@ function Header() {
           </li>
         ))}
       </ul>
+
+      {/* Mobile Navigation Menu */}
+
       <div className="md:hidden">
+        {/* Menu toggle button */}
         <h2
           className="text-white font-medium flex items-center gap-2 px-3 py-2 pb-2 
             bg-gray-700 rounded-md cursor-pointer"
@@ -63,6 +76,9 @@ function Header() {
             <IoChevronUpOutline className="mt-1" />
           )}
         </h2>
+
+        {/* Mobile dropdown menu */}
+
         {toggle ? (
           <ul
             className="absolute bg-gray-700
@@ -71,6 +87,7 @@ function Header() {
           >
             {menu.map((item) => (
               <li
+                key={item.id}
                 className="text-gray-400 text-[18px] 
                 font-medium cursor-pointer mb-3 mt-2 
                  hover:bg-gray-600 hover:text-white
@@ -82,17 +99,24 @@ function Header() {
           </ul>
         ) : null}
       </div>
+
+      {/* Search and User Profile Section */}
+
       <div className="flex gap-10">
+        {/* Search Icon */}
+
         <IoSearch
           className="text-[35px] text-gray-300 
             hover:bg-gray-700 px-[4px] pb-[2px] py-[2px] cursor-pointer
             rounded-md hover:text-white transition-all duration-500 ease-in-out"
         />
+
+        {/* user profile */}
         <h2
           className="px-[10px] text-[20px]
             text-gray-300 border-[2px] border-white rounded-full"
         >
-          R
+          K
         </h2>
       </div>
     </div>
