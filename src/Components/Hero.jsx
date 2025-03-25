@@ -59,7 +59,7 @@ function Hero() {
         src={IMAGE_BASE_URL + movieList.backdrop_path}
         width={1920}
         height={1080}
-        className="h-[85vh] object-cover"
+        className="h-[85vh] object-fit"
       />
     </div>
   );

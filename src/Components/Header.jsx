@@ -39,7 +39,7 @@ function Header() {
   ];
 
   return (
-    <div className="flex justify-between items-center p-4 px-10">
+    <div className="flex justify-between items-center p-4 px-10 absolute w-full bg-gradient-to-b from-[#1e2126] to-transparent">
       {/* Logo */}
 
       <img src={logo} className="w-[120px]" />
