@@ -15,7 +15,7 @@ function Hero() {
   const getPopularMovies = () => {
     GlobalApi.getPopularMovies.then((resp) => {
       const result = resp.data.results; // Extract movie results from API response
-      setMovieList(result[0]); // Set only the first movie in the state
+      setMovieList(result[7]); // Set only the first movie in the state
     });
   };
   return (
@@ -59,7 +59,7 @@ function Hero() {
         src={IMAGE_BASE_URL + movieList.backdrop_path}
         width={1920}
         height={1080}
-        className="h-[85vh] object-fit"
+        className="h-[85vh] object-cover"
       />
     </div>
   );
