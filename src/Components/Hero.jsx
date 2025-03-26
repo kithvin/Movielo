@@ -15,7 +15,8 @@ function Hero() {
   const getPopularMovies = () => {
     GlobalApi.getPopularMovies.then((resp) => {
       const result = resp.data.results; // Extract movie results from API response
-      setMovieList(result[8]); // Set only the first movie in the state
+      const randomNum=Math.floor(Math.random()*10) // Generate a random number between 0 and 9
+      setMovieList(result[randomNum]); // Set only the first movie in the state
     });
   };
   return (
@@ -73,3 +74,4 @@ function Hero() {
 }
 
 export default Hero;
+

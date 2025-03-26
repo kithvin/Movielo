@@ -39,21 +39,22 @@ function Header() {
   ];
 
   return (
-    <div className="flex justify-between items-center p-4 px-10 absolute w-full bg-gradient-to-b from-[#1e2126] to-transparent">
+    <div className="flex z-30 justify-between items-center p-4 px-10 absolute w-full bg-gradient-to-b from-[#1e2126] to-transparent">
       {/* Logo */}
 
       <img src={logo} className="w-[120px]" />
 
       {/* Desktop Navigation Menu */}
 
-      <ul className="hidden  md:flex gap-8">
+      <ul className="hidden md:flex gap-8">
         {menu.map((item) => (
           <li
             key={item.id}
-            className="text-gray-400 text-[18px] 
-                font-medium cursor-pointer mb-3 mt-2 
-                 hover:bg-gray-600 hover:text-white
-                px-3 pb-2 py-1 rounded-md transition-all duration-500"
+            className={`text-gray-400 text-[18px] 
+        font-medium cursor-pointer mb-3 mt-2 
+        hover:bg-gray-700 hover:text-white
+        px-3 pb-2 py-1 rounded-md transition-all duration-500 
+        ${item.id === 0 ? "bg-gray-700 text-white" : ""}`}
           >
             {item.name}
           </li>
@@ -124,3 +125,4 @@ function Header() {
 }
 
 export default Header;
+

@@ -9,11 +9,11 @@ function MovieCard(movie) {
       {/* Movie poster image */}
       <img
         src={IMAGE_BASE_URL + movie.movie.backdrop_path} // Image URL concatenated with backdrop_path from the movie object
-        className="w-[230px] md:w-[330px] h-[130px] md:h-[200px] object-cover rounded-2xl group-hover:border-[5px] border-gray-400 p-2 transition-all duration-300 ease-in-out"
+        className="w-[230px] md:w-[310px] h-[130px] md:h-[200px] object-cover rounded-2xl group-hover:border-[5px] border-gray-400 p-2 transition-all duration-300 ease-in-out"
       />
 
       {/* Conditional label for movie */}
-      <h2 className="text-gray-400 mt-2 text-[12px] md:text-[17px] font-bold">
+      <h2 className="text-gray-400 mt-2 text-[12px] md:text-[17px]">
         {movie.movie.id % 2 == 0 ? "WATCH MOVIE" : "START WATCHING"}
       </h2>
 

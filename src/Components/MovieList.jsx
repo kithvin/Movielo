@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GlobalApi from "../Services/GlobalApi";
 import MovieCard from "./MovieCard";
+import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 
 function MovieList(genereId) {
   // State to store the list of movies for the selected genre
@@ -21,13 +22,15 @@ function MovieList(genereId) {
   };
 
   return (
-    <div>
+    <div className="flex items-center">
+      <IoChevronBackOutline className="text-[36px] text-white bg-black p-2 cursor-pointer mb-[120px] rounded-full" />
       <div className="w-full whitespace-nowrap mb-16">
         {/* Loop through the movieList and display the first 5 movies */}
         {movieList.map(
-          (item, index) => index < 5 && <MovieCard movie={item} /> // Only display the first 5 movies
+          (item, index) => index < 5 && <MovieCard key={item.id} movie={item} /> // Only display the first 5 movies
         )}
       </div>
+      <IoChevronForwardOutline className="text-[36px] text-white bg-black p-2 cursor-pointer mb-[120px] rounded-full" />
     </div>
   );
 }
