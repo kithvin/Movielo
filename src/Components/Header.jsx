@@ -8,7 +8,7 @@ import {
 
 function Header() {
   // State to handle the toggle for the mobile menu
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   // Navigation menu items
   const menu = [

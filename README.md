@@ -39,6 +39,8 @@ Movielo is a cutting-edge movie streaming platform designed to deliver an immers
 
 • Axios (For API Requests) → npm install axios
 
+• Selected scrollbar hide → npm i tailwind-scrollbar-hide
+
 ===========================================================================
 
 ▶️ How to Run the Movielo Project

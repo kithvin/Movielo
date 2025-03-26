@@ -15,15 +15,18 @@ function Hero() {
   const getPopularMovies = () => {
     GlobalApi.getPopularMovies.then((resp) => {
       const result = resp.data.results; // Extract movie results from API response
-      setMovieList(result[7]); // Set only the first movie in the state
+      setMovieList(result[8]); // Set only the first movie in the state
     });
   };
   return (
     <div>
+      {/* Background overlay */}
       <div
         className="absolute h-[85vh] bg-gradient-to-t 
               from-[#1e2126] via-transparent to-transparent w-full"
       ></div>
+
+      {/* Movie details */}
       <div
         className="absolute mt-[400px] md:mt[350px] 
         px-10 md:px-24"
@@ -40,26 +43,30 @@ function Hero() {
         >
           {movieList.original_title}
         </h2>
+
+        {/* Buttons */}
         <div className="flex gap-5 mt-7">
           <button
             className="bg-red-600 text-white px-6 py-2 rounded-lg font-bold 
-                     hover:bg-red-700 transition duration-300"
+                     hover:bg-red-700 transition duration-300 cursor-pointer"
           >
             PLAY
           </button>
           <button
             className="bg-transparent border-2 border-white text-white px-6 py-2 rounded-lg
-                     hover:border-gray-500 hover:text-gray-300 transition duration-300"
+                     hover:border-gray-500 hover:text-gray-300 transition duration-300 cursor-pointer"
           >
             DETAILS
           </button>
         </div>
       </div>
+
+      {/* Background image */}
       <img
         src={IMAGE_BASE_URL + movieList.backdrop_path}
         width={1920}
         height={1080}
-        className="h-[85vh] object-cover"
+        className="h-[85vh] object-fit"
       />
     </div>
   );
