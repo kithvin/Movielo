@@ -69,4 +69,4 @@ Movielo is a cutting-edge movie streaming platform designed to deliver an immers
 
 🌐 Deployment
 
-• The project is live and accessible at: (https:// movielo.vercel.app/)  
+• The project is live and accessible at: (https://movielo.vercel.app/)  
