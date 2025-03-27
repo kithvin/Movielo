@@ -63,3 +63,10 @@ Movielo is a cutting-edge movie streaming platform designed to deliver an immers
 5. 🚀 Run Development Server
 
    Start with `npm run dev`. Access at `http://localhost:3000`.
+
+
+===========================================================================
+
+🌐 Deployment
+
+• The project is live and accessible at: (https:// movielo.vercel.app/)  
