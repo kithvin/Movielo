@@ -7,10 +7,13 @@ import {
 } from "react-icons/io5";
 
 function Header() {
+  
   // State to handle the toggle for the mobile menu
+
   const [toggle, setToggle] = useState(false);
 
   // Navigation menu items
+
   const menu = [
     {
       id: 1,
@@ -64,7 +67,9 @@ function Header() {
       {/* Mobile Navigation Menu */}
 
       <div className="md:hidden">
+
         {/* Menu toggle button */}
+
         <h2
           className="text-white font-medium flex items-center gap-2 px-3 py-2 pb-2 
             bg-gray-700 rounded-md cursor-pointer"
@@ -105,7 +110,6 @@ function Header() {
 
       <div className="flex gap-10">
         {/* Search Icon */}
-
         <IoSearch
           className="text-[35px] text-gray-300 
             hover:bg-gray-700 px-[4px] pb-[2px] py-[2px] cursor-pointer
@@ -113,6 +117,7 @@ function Header() {
         />
 
         {/* user profile */}
+
         <h2
           className="px-[10px] text-[20px]
             text-gray-300 border-[2px] border-white rounded-full"
@@ -125,4 +130,3 @@ function Header() {
 }
 
 export default Header;
-

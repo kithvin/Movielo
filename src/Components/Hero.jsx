@@ -15,12 +15,13 @@ function Hero() {
   const getPopularMovies = () => {
     GlobalApi.getPopularMovies.then((resp) => {
       const result = resp.data.results; // Extract movie results from API response
-      const randomNum=Math.floor(Math.random()*10) // Generate a random number between 0 and 9
+      const randomNum = Math.floor(Math.random() * 10); // Generate a random number between 0 and 9
       setMovieList(result[randomNum]); // Set only the first movie in the state
     });
   };
+
   return (
-    <div>
+    <div className="relative">
       {/* Background overlay */}
       <div
         className="absolute h-[85vh] bg-gradient-to-t 
@@ -28,25 +29,16 @@ function Hero() {
       ></div>
 
       {/* Movie details */}
-      <div
-        className="absolute mt-[400px] md:mt[350px] 
-        px-10 md:px-24"
-      >
-        <h2
-          className="text-white text-[19px]
-            lg:text-[27px]"
-        >
+      <div className="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-6 sm:px-10 md:px-24 w-full text-center md:text-left">
+        <h2 className="text-white text-[19px] sm:text-[22px] lg:text-[27px]">
           Watch Anytime Anywhere Only on MOVIELO! 🎬🔥
         </h2>
-        <h2
-          className="text-white text-[36px]
-            lg:text-[47px] font-bold mt-1"
-        >
+        <h2 className="text-white text-[36px] sm:text-[40px] lg:text-[47px] font-bold mt-1">
           {movieList.original_title}
         </h2>
 
         {/* Buttons */}
-        <div className="flex gap-5 mt-7">
+        <div className="flex gap-5 mt-7 flex-wrap justify-center md:justify-start">
           <button
             className="bg-red-600 text-white px-6 py-2 rounded-lg font-bold 
                      hover:bg-red-700 transition duration-300 cursor-pointer"
@@ -65,13 +57,11 @@ function Hero() {
       {/* Background image */}
       <img
         src={IMAGE_BASE_URL + movieList.backdrop_path}
-        width={1920}
-        height={1080}
-        className="h-[85vh] object-fit"
+        alt={movieList.original_title}
+        className="h-[85vh] object-fit w-full"
       />
     </div>
   );
 }
 
 export default Hero;
-
