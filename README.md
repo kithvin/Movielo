@@ -1,6 +1,6 @@
 🎬 Movielo – Stream Movies.
 
-Movielo is a cutting-edge movie streaming platform designed to deliver an immersive entertainment experience. Built using Vite, React.js, JavaScript, and Tailwind CSS, Movielo boasts lightning-fast performance, a sleek and modern user interface, and full responsiveness across all devices. Powered by the TMDb API, Movielo brings the latest movie data directly to your screen, making it easy to explore trending, top-rated, and upcoming releases.
+Movielo (frontend web application) is a cutting-edge movie streaming platform designed to deliver an immersive entertainment experience. Built using Vite, React.js, JavaScript, and Tailwind CSS, Movielo boasts lightning-fast performance, a sleek and modern user interface, and full responsiveness across all devices. Powered by the TMDb API, Movielo brings the latest movie data directly to your screen, making it easy to explore trending, top-rated, and upcoming releases.
 
 
 ===========================================================================
